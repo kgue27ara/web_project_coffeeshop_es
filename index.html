@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triple Espresso</title>
-    <link href="./images/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="./favicon.ico" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,9 +36,81 @@
     </div>
        </header>
     <main class="content">
-    <section id="reservation"></section>
-    <section id="contact"></section>
+    <section id="reservation" class="container">
+        <h2 class="section-title">Reservar una mesa</h2>
+        <form class="form">
+        <fieldset>
+
+        <div class="input__format">
+        <label class="form__label" for="name">Nombre</label>
+        <input type="text" 
+                class="form__input" 
+                placeholder="Nombre"
+                id="name"
+                required
+                />
+        </div>
+
+        
+        <div class="input__format">
+        <label class="form__label" for="number">Número de comensales</label>
+        <input type="number" 
+                class="form__input" 
+                min="1"
+                max="8"
+                placeholder="1-8"
+                id="number"
+                required
+                />
+        </div>
+
+        
+        <div class="input__format">
+        <label class="form__label">Fecha y hora</label>
+        <input type="date" 
+                class="form__input" 
+                placeholder="Fecha y hora"
+                required
+                />
+        </div>    
+
+
+        <div class="input__format">
+        <label class="form__label" for="email">Tu correo electrónico</label>
+        <input type="email" 
+                class="form__" 
+                placeholder="email@email.com"
+                id="email"
+                required
+                />
+        </div>
+
+        
+        <div class="form__button">
+        <button type="button" 
+                class="form__button-submit">
+                Reservar una mesa
+            </button>
+        </div>
+
+        <div class="form__checkbox">
+        <label class="form__label" for="términos">
+            </label>
+        <input type="checkbox" 
+          id="términos"
+          class="form__checkbox-input"
+          />
+          Acepto los términos de uso
+        </div>
+        
+        </fieldset>
+       </form> 
+    
+    </section>
+    <section class="contact" id="contact"></section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        
+    </footer>
 </body>
 </html>
