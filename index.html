@@ -1,128 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Triple Espresso</title>
-    <link href="./favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-<header class="header">
-    <nav class="nav">
-        <img src="./images/logo_coffeeshop_dark.svg" alt="Logo Triple Espresso" class="logo">
-            <ul class="nav-links">
-                <li ><a class="nav-link" href="#reservation">Reservar una mesa</a></li>
-                <li ><a class="nav-link" href="#contact" >Contactos</a></li>
-            </ul>
-    </nav>
-    <h1 class="header-title"> 
-        <span class="span-accent">Café de especialidad</span> 
+    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="./images/logo_coffeeshop_dark.svg"
+          alt="Logo Triple Espresso"
+          class="logo"
+        />
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#reservation">Reservar una mesa</a></li>
+          <li><a class="nav-link" href="#contact">Contactos</a></li>
+        </ul>
+      </nav>
+      <h1 class="header-title">
+        <span class="span-accent">Café de especialidad</span>
         <span class="span-secondary">en Triple Peaks</span>
-    </h1>
-    <p class="header-description">¡Te damos la bienvenida a nuestra zona de estudio! Aquí tenemos café para darte energía 
-        y motivar tu creatividad.</p>    
-    <img src="./images/inside_coffee_shop.png" alt="la cafeteria" class="header-image">
-    <div class="header-info">
-    <div class="header-hours">
-        <p class="info-text">Horario:</p>
-        <p class="info-text">Lunes a Viernes (de 10:00h a 19:00h)</p>
-        <p class="info-text">Sábados y Domingos (de 11:00h a 18:00h)</p>
-    </div>
+      </h1>
+      <p class="header-description">
+        ¡Te damos la bienvenida a nuestra zona de estudio! Aquí tenemos café
+        para darte energía y motivar tu creatividad.
+      </p>
+      <img
+        src="./images/inside_coffee_shop.png"
+        alt="la cafeteria"
+        class="header-image"
+      />
+      <div class="header-info">
+        <div class="header-hours">
+          <p class="info-text">Horario:</p>
+          <p class="info-text">Lunes a Viernes (de 10:00h a 19:00h)</p>
+          <p class="info-text">Sábados y Domingos (de 11:00h a 18:00h)</p>
+        </div>
         <p class="info-text">Avenida del Éxito 200, Ciudad Triple Peaks</p>
-    </div>
-       </header>
+      </div>
+    </header>
 
-<main class="content">
-<section id="reservation" class="container">
+    <main class="content">
+      <section id="reservation" class="container">
         <h2 class="section-title">Reservar una mesa</h2>
-        <form class="form">
-        <fieldset>
-
-        <div class="input__format">
-        <label class="form__label" for="name">Nombre</label>
-        <input type="text" 
-                class="form__input" 
+        <form class="form" method="POST">
+          <fieldset>
+            <div class="input__format">
+              <label class="form__label" for="name">Nombre</label>
+              <input
+                type="text"
+                class="form__input"
                 placeholder="Nombre"
                 id="name"
+                name="noombre_reservacion"
                 required
-                />
-        </div>
+              />
+            </div>
 
-        
-        <div class="input__format">
-        <label class="form__label" for="number">Número de comensales</label>
-        <input type="number" 
-                class="form__input" 
+            <div class="input__format">
+              <label class="form__label" for="number"
+                >Número de comensales</label
+              >
+              <input
+                type="number"
+                class="form__input"
                 min="1"
                 max="8"
                 placeholder="1-8"
                 id="number"
+                name="numero_comensales"
                 required
-                />
-        </div>
+              />
+            </div>
 
-        
-        <div class="input__format">
-        <label class="form__label">Fecha y hora</label>
-        <input type="date" 
-                class="form__input" 
+            <div class="input__format">
+              <label class="form__label" for="date">Fecha y hora</label>
+              <input
+                type="datetime-local"
+                class="form__input"
                 placeholder="Fecha y hora"
+                id="date"
                 required
-                />
-        </div>    
+                name="fecha_hora_reserva"
+              />
+            </div>
 
-
-        <div class="input__format">
-        <label class="form__label" for="email">Tu correo electrónico</label>
-        <input type="email" 
-                class="form__input" 
+            <div class="input__format">
+              <label class="form__label" for="email"
+                >Tu correo electrónico</label
+              >
+              <input
+                type="email"
+                class="form__input"
                 placeholder="email@email.com"
                 id="email"
+                name="correo_electronico"
                 required
-                />
-        </div>
+              />
+            </div>
 
-        
-        <div class="form__button">
-        <button type="button" 
-                class="form__button-submit">
+            <div class="form__button">
+              <button type="submit" class="form__button-submit">
                 Reservar una mesa
-            </button>
-        </div>
+              </button>
+            </div>
 
-        <div class="form__checkbox">
-        <label class="form__label" for="términos">
-            </label>
-        <input type="checkbox" 
-          id="términos"
-          class="form__checkbox-input"
-          />
-          Acepto los términos de uso
-        </div>
-        
-        </fieldset>
-       </form> 
-</section>
-
+            <div class="form__checkbox">
+              <label class="form__label" for="términos"> </label>
+              <input
+                type="checkbox"
+                id="términos"
+                class="form__checkbox-input"
+                name="aceptado"
+              />
+              Acepto los términos de uso
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
     <footer class="footer">
-        <div class="circle-bg"></div>
-        <div class="footer__logo-container">
-            <img src="./images/logo_coffeeshop_light.svg" alt="Logo Triple Espresso" class="footer__logo">
-            <p class="textfooter__copyright">© 2026 Karina Guevara </p>
-    </div>
-        <div>
+      <div class="circle-bg"></div>
+      <div class="footer__logo-container">
+        <img
+          src="./images/logo_coffeeshop_light.svg"
+          alt="Logo Triple Espresso"
+          class="footer__logo"
+        />
+        <p class="textfooter__copyright">© 2026 Karina Guevara</p>
+      </div>
+      <div>
+        <p class="title__footer">Redes sociales</p>
         <ul class="footer__list-socialmedia">
-            <p class="title__footer"> Redes sociales</p>
-            <li class="footer__socialmedia-facebook"><a href="#" target="_blank">Facebook<img src="./images/facebook_white.svg" alt="Facebook"></a></li>
-            <li class="footer__socialmedia-instagram"><a href="#" target="_blank">Instagram<img src="./images/instagram_white.svg" alt="Instagram"></a></li> 
+          <li class="footer__socialmedia-facebook">
+            <a href="#" target="_blank"
+              >Facebook<img src="./images/facebook_white.svg" alt="Facebook"
+            /></a>
+          </li>
+          <li class="footer__socialmedia-instagram">
+            <a href="#" target="_blank"
+              >Instagram<img src="./images/instagram_white.svg" alt="Instagram"
+            /></a>
+          </li>
         </ul>
-        </div>
-
+      </div>
     </footer>
-</main>
-</body>
+  </body>
 </html>
